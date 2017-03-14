@@ -1,28 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Home Content -->
-	<div class="main">
-		<!--<a class="home_article" href="single_page.html">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/article_img_1.png">
-			<h2 class="home_title">Название новости</h2>
-			<div class="home_meta">13.02.2017</div>
-		</a>
-		<a class="home_article" href="single_page.html">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/article_img_2.png">
-			<h2 class="home_title">Название новости</h2>
-			<div class="home_meta">13.02.2017</div>
-		</a>
-		<a class="home_article" href="single_page.html">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/article_img_3.png">
-			<h2 class="home_title">Название новости</h2>
-			<div class="home_meta">13.02.2017</div>
-		</a>
-		<a class="home_article" href="single_page.html">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/article_img_4.png">
-			<h2 class="home_title">Название новости</h2>
-			<div class="home_meta">13.02.2017</div>
-		</a>-->	
-	
+	<div class="main">	
 	<!-- The Main Loop -->
 		<?php $the_query = new WP_Query( 'category_name=news&showposts=4'); ?>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -31,7 +10,18 @@
 				<h2 class="home_title"><?php the_title(); ?></h2>
 				<div class="home_meta"><?php the_time('d.m.Y'); ?></div>
 				</a>
-			<?php endwhile; ?>	
+			<?php endwhile; ?>
+
+		<?php if (  $the_query->max_num_pages > 1 ) : ?>
+			<script>
+				var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+				var true_posts = '<?php echo serialize($the_query->query_vars); ?>';
+				var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+				var max_pages = '<?php echo $the_query->max_num_pages; ?>';
+			</script>
+			<div id="true_loadmore">Загрузить ещё</div>
+		<?php endif; ?>	
+				
 		<?php wp_reset_postdata(); ?>
 	<!-- -End Loop-->
 	</div>		

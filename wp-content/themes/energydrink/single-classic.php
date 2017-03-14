@@ -5,7 +5,7 @@
 	<?php the_content(); ?>
 	<div class="product_footer">
 		<div class="product_link left">
-			<a href="receipt_page.html">
+			<a href="<?php echo get_page_link( 114 ); ?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/receipt_img_n.png">
 				<span class="caption">
 					<h2 class="home_title">Рецепты коктейлей</h2>
