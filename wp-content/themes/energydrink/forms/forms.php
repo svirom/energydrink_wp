@@ -14,7 +14,7 @@
 
 
     // Email will be send
-    	$to = "svjatoslav.romanjuk@gmail.com, Romanyuk-rv@yandex.ru"; // Change with your email address
+    	$to = "svjatoslav.romanjuk@gmail.com"; // Change with your email address
     	$sub = "$oemail from MTV EnergyDrink ЗАКАЗ"; // You can define email subject
     // HTML Elements for Email Body
     	$body = <<<EOD
@@ -48,7 +48,7 @@ EOD;
     	$email = trim($_POST['pemail']);
 
     // Email will be send
-    	$to = "svjatoslav.romanjuk@gmail.com, Romanyuk-rv@yandex.ru"; // Change with your email address
+    	$to = "svjatoslav.romanjuk@gmail.com"; // Change with your email address
     	$sub = "$name from MTV EnergyDrink"; // You can define email subject
     // HTML Elements for Email Body
     	$body = <<<EOD
@@ -94,7 +94,7 @@ EOD;
 			}
 
     // Email will be send
-    	$to = "svjatoslav.romanjuk@gmail.com, Romanyuk-rv@yandex.ru"; // Change with your email address
+    	$to = "svjatoslav.romanjuk@gmail.com"; // Change with your email address
     	$sub = "$name from MTV EnergyDrink"; // You can define email subject
     // HTML Elements for Email Body
     	$body = <<<EOD

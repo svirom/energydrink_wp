@@ -15,7 +15,7 @@ $(document).ready(function(){
       type:'POST',
       success:function(data){
         if( data ) { 
-          $('#true_loadmore').text('Загрузить ещё').before(data); // вставляем новые посты
+          $('#true_loadmore').text('Смотреть больше новостей').before(data); // вставляем новые посты
           current_page++; // увеличиваем номер страницы на единицу
           if (current_page == max_pages) $("#true_loadmore").remove(); // если последняя страница, удаляем кнопку
         } else {

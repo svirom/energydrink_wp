@@ -5,7 +5,6 @@ Template Name: Map Page
  get_header(); ?>
 	
 	<div class="main partners_page">
-		<p>Россия</p>
 		<img src="<?php echo get_template_directory_uri(); ?>/img/russia_img.png">
 		<div class="partners_form">
 			<p>Хотите стать партнером</p>
@@ -24,16 +23,18 @@ Template Name: Map Page
 			<?php
 			$loop_p = new WP_Query( array( 
         		'post_type' => 'partner',   
-        		'posts_per_page' => 30 ) );
+        		'posts_per_page' => 50 ) );
 			$post_type_p = get_post_type( $partner );
  		
-		while ( $loop_p->have_posts() ) : $loop_p->the_post(); ?>  
+		while ( $loop_p->have_posts() ) : $loop_p->the_post(); ?> 
+
 			<div id="post-<?php the_ID(); ?>" <?php post_class('partners_brand'); ?>>
 				<?php the_post_thumbnail(); ?>
 				<div class="partners_content">
     				<?php the_title( '<h4>', '</h4>' ); ?>
     				<?php the_content(); ?> 
-    			</div>		
+    			</div>	
+    			
     		</div>
 		<?php endwhile; ?>
 		

@@ -6,8 +6,8 @@ Template Name: Contacts Page
 	
 	<div class="main contacts_page">
         <div class="contacts_header">
-            <h2>Контакты.</h2>
-            <p>Генеральный представитель России.</p>
+            <h2>Контакты</h2>
+            <p>Генеральный представитель России</p>
         </div>
         <div class="contacts_form">
             <form id="contacts_form" action="/" method="post">

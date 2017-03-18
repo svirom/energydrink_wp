@@ -10,7 +10,7 @@ Template Name: Receipts Page
 			<?php
 			$loop_nona = new WP_Query( array( 
         		'post_type' => 'receipt_nona',   
-        		'posts_per_page' => 15 ) );
+        		'posts_per_page' => 20 ) );
 			$post_type_a = get_post_type( $receipt_nona );
  		
 		while ( $loop_nona->have_posts() ) : $loop_nona->the_post(); ?>  
@@ -30,7 +30,7 @@ Template Name: Receipts Page
 			<?php
 			$loop_a = new WP_Query( array( 
         		'post_type' => 'receipt_a',   
-        		'posts_per_page' => 15 ) );
+        		'posts_per_page' => 20 ) );
 			$post_type_a = get_post_type( $receipt_a );
  		
 		while ( $loop_a->have_posts() ) : $loop_a->the_post(); ?>  

@@ -148,40 +148,31 @@ $(document).ready(function(){
     var original_big_price = $('#original_big').closest('td').prev('td').prev('td').prev('td').find('span');
     var original_small_price = $('#original_small').closest('td').prev('td').prev('td').prev('td').find('span');
     
-
-		total_weight += parseInt(classic_big*12);
-		$('#calc_form .total_weight').text(total_weight);
-		total_weight += parseInt(classic_small*6);
-		$('#calc_form .total_weight').text(total_weight);
-		total_weight += parseInt(original_big*12);
-		$('#calc_form .total_weight').text(total_weight);
-		total_weight += parseInt(original_small*6); 
-		$('#calc_form .total_weight').text(total_weight);
+    total_weight1 = parseFloat(classic_big*24*0.550);
+    total_weight2 = parseFloat(classic_small*12*0.280);
+    total_weight3 = parseFloat(original_big*24*0.550);
+    total_weight4 = parseFloat(original_small*12*0.280);
+    total_weight = total_weight1 + total_weight2 + total_weight3 + total_weight4;
+    w = total_weight.toLocaleString() + total_weight.toString().slice(total_weight.toString());
+    $('#calc_form .total_weight').text(w);
 
     total_volume1 = parseInt(classic_big*24);
     total_volume2 = parseInt(classic_small*12);
     total_volume3 = parseInt(original_big*24);
     total_volume4 = parseInt(original_small*12);
-    $('#calc_form .total_volume').text(((total_volume1/2000)+(total_volume2/4000)+(total_volume3/2000)+(total_volume4/4000)).toFixed(1));
+    total_volume = (total_volume1/1728) + (total_volume2/4092) + (total_volume3/1728) + (total_volume4/4092)
+    $('#calc_form .total_volume').text(((total_volume1/1728)+(total_volume2/4092)+(total_volume3/1728)+(total_volume4/4092)).toFixed(2));
 
-    if ((total_volume1/2000) >= 1) {
+    if (total_volume >= 1) {
       $(classic_big_price).text(65);
-    } else {
-      $(classic_big_price).text(75.3);
-    }
-    if ((total_volume2/4000) >= 1) {
       $(classic_small_price).text(53);
-    } else {
-      $(classic_small_price).text(63.6);
-    }
-    if ((total_volume3/2000) >= 1) {
       $(original_big_price).text(65);
-    } else {
-      $(original_big_price).text(75.3);
-    }
-    if ((total_volume4/4000) >= 1) {
       $(original_small_price).text(53);
-    } else {
+    }
+    else {
+      $(classic_big_price).text(75.3);
+      $(classic_small_price).text(63.6);
+      $(original_big_price).text(75.3);
       $(original_small_price).text(63.6);
     }
 
@@ -191,23 +182,38 @@ $(document).ready(function(){
     var original_small_price_v = $('#original_small_p').text();
 
     total_price1 = parseFloat(classic_big_price_v*24).toFixed(2);
-    classic_big_value.text(total_price1*classic_big);
+    //classic_big_value.text((total_price1*classic_big).toFixed(2));
+    var num1 = parseFloat(total_price1*classic_big);
+    res1 = num1.toLocaleString() + num1.toString().slice(num1.toString());
+    classic_big_value.text(res1);
 
     total_price2 = parseFloat(classic_small_price_v*12).toFixed(2);
-    classic_small_value.text(total_price2*classic_small);
+    //classic_small_value.text((total_price2*classic_small).toFixed(2));
+    var num2 = parseFloat(total_price2*classic_small);
+    res2 = num2.toLocaleString() + num2.toString().slice(num2.toString());
+    classic_small_value.text(res2);
 
     total_price3 = parseFloat(original_big_price_v*24).toFixed(2);
-    original_big_value.text(total_price3*original_big);
+    //original_big_value.text((total_price3*original_big).toFixed(2));
+    var num3 = parseFloat(total_price3*original_big);
+    res3 = num3.toLocaleString() + num3.toString().slice(num3.toString());
+    original_big_value.text(res3);
 
     total_price4 = parseFloat(original_small_price_v*12).toFixed(2);
-    original_small_value.text(total_price4*original_small);
+    //original_small_value.text((total_price4*original_small).toFixed(2));
+    var num4 = parseFloat(total_price4*original_small);
+    res4 = num4.toLocaleString() + num4.toString().slice(num4.toString());
+    original_small_value.text(res4);
 		 
-    $('#calc_form .total_value').text(((total_price1*classic_big) + (total_price2*classic_small) + (total_price3*original_big) + (total_price4*original_small)).toFixed(2));
+    //$('#calc_form .total_value').text(((total_price1*classic_big) + (total_price2*classic_small) + (total_price3*original_big) + (total_price4*original_small)).toFixed(2));
+    var num = parseFloat((total_price1*classic_big) + (total_price2*classic_small) + (total_price3*original_big) + (total_price4*original_small));
+    res = num.toLocaleString() + num.toString().slice(num.toString()); 
+    $('#calc_form .total_value').text(res);
 
-    classic_big_number.text(parseInt(classic_big*24));
-    classic_small_number.text(parseInt(classic_small*12));
-    original_big_number.text(parseInt(original_big*24));
-    original_small_number.text(parseInt(original_small*12)); 
+    classic_big_number.text(parseInt(classic_big*24).toLocaleString()); 
+    classic_small_number.text(parseInt(classic_small*12).toLocaleString());
+    original_big_number.text(parseInt(original_big*24).toLocaleString());
+    original_small_number.text(parseInt(original_small*12).toLocaleString()); 
     
 	})
  
@@ -216,9 +222,18 @@ $(document).ready(function(){
 
   function send_form3() {
     var t3 = $(this);
-    var fields3 = 'input:not([type="submit"])';
+    var fields3 = 'input.required';
     event.preventDefault();
-    
+    t3.find(fields3).each(function() {
+      if ($(this).val() == 0) {
+        $(this).addClass('error');
+      } else {
+        $(this).removeClass('error');
+      }
+    });
+    if (t3.find('.error').length > 0) { 
+      return false;
+    } else {
     var form_data = $('#calc_form').serialize();
     var ajaxurl = '/wp-admin/admin-ajax.php';
       $.ajax({
@@ -265,7 +280,7 @@ $(document).ready(function(){
         }
 
       });
-    
+    }
     return false;
   }
 

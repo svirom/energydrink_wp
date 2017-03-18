@@ -2,7 +2,18 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Energydrink</title>
+    <title>
+    <?php
+        global $page, $paged;
+        wp_title( '|', true, 'right' );
+        bloginfo( 'name' );
+        $site_description = get_bloginfo( 'description', 'display' );
+        if ( $site_description && ( is_home() || is_front_page() ) )
+            echo " | $site_description";
+        if ( $paged >= 2 || $page >= 2 )
+            echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
+    ?>
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <?php wp_head(); ?>
 	<?php if (is_user_logged_in()):?>

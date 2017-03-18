@@ -19,7 +19,7 @@
 				var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
 				var max_pages = '<?php echo $the_query->max_num_pages; ?>';
 			</script>
-			<div id="true_loadmore">Загрузить ещё</div>
+			<div id="true_loadmore">Смотреть больше новостей</div>
 		<?php endif; ?>	
 				
 		<?php wp_reset_postdata(); ?>
