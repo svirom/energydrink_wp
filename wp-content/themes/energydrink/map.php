@@ -21,10 +21,13 @@ Template Name: Map Page
 
 		
 			<?php
+			
 			$loop_p = new WP_Query( array( 
         		'post_type' => 'partner',   
-        		'posts_per_page' => 50 ) );
-			$post_type_p = get_post_type( $partner );
+        		'posts_per_page' => 50,
+        		'order' => 'ASC' )
+			);
+			//$post_type_p = get_post_type( $partner );
  		
 		while ( $loop_p->have_posts() ) : $loop_p->the_post(); ?> 
 
