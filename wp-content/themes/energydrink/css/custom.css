@@ -387,7 +387,7 @@ footer.main_footer .copyright img { width: auto; }
 .main.partners_page h2 { margin: 0; margin-top: 24px; font-family: 'Raleway', sans-serif; font-size: 48px; font-weight: 600; text-align: center; line-height: 1; color: #FFFFFF; text-transform: uppercase;}
 .main.partners_page .partners_brand { float: left; width: 50%; height: 400px; padding: 72px 24px 36px 48px;}
 /*.main.partners_page .partners_brand img { width: 40%; max-width: 200px; float: left; height: auto; max-height: 300px;}*/
-.main.partners_page .partners_brand img { width: auto; max-width: 200px; float: left; height: auto; max-height: 300px; -o-object-fit: cover; object-fit: cover; }
+.main.partners_page .partners_brand img { width: /*auto*/40%; max-width: 200px; float: left; height: auto; max-height: 300px; -o-object-fit: cover; object-fit: cover; }
 .main.partners_page .partners_brand .partners_content { width: 60%; float: left;}
 .main.partners_page .partners_brand h4 { position: relative; margin: 0; padding-left: 40px; font-size: 28px; font-weight: 400; color: #FFFFFF; }
 .main.partners_page .partners_brand h4:after { content: ' '; display: block; position: absolute; width: 80%; bottom: -7px;  border-top: 1px solid rgba(255, 255, 255, 0.5); }
