@@ -155,20 +155,20 @@ footer.main_footer .copyright img { width: auto; }
 .main.receipt_page .receipt:after,
 .main.receipt_page .drink_receipt:after { content: ' '; display: block; clear: both; }
 .main.receipt_page .drink_receipt .drink_img { float: right; width: 37%;}
-.main.receipt_page .drink_receipt .drink_img img { height: auto; -o-object-fit: cover; object-fit: cover; }
+.main.receipt_page .drink_receipt .drink_img img { max-width: 200px; height: auto; -o-object-fit: cover; object-fit: cover; }
 .main.receipt_page .drink_receipt .drink_content { float: left; width: 63%; }
-.main.receipt_page .drink_receipt .drink_content h3 { margin: 0 0 14px; font-size: 37px; color: #FFFFFF; line-height: 1;}
-.main.receipt_page .drink_receipt .drink_content p { position: relative; margin-bottom: 36px; padding-right: 20px; color: #FFFFFF; font-size: 23px;}
-.main.receipt_page .drink_receipt .drink_content p.receipt_footer { padding-top: 8px; font-size: 19px; font-weight: 300; font-style: normal; color: rgba(255, 255, 255, 0.9); }
+.main.receipt_page .drink_receipt .drink_content h3 { margin: 0 0 14px; font-size: 28px; color: #FFFFFF; line-height: 1;}
+.main.receipt_page .drink_receipt .drink_content p { position: relative; margin-bottom: 12px; padding-right: 20px; color: #FFFFFF; font-size: 16px;}
+.main.receipt_page .drink_receipt .drink_content p.receipt_footer { padding-top: 8px; font-size: 16px; font-weight: 300; font-style: normal; color: rgba(255, 255, 255, 0.9); }
 .main.receipt_page .drink_receipt .drink_content p.receipt_footer:before { content: ' '; display: block; clear: both; position: absolute; top: 0; width: calc(100% - 40px); border-top: 1px solid rgba(255, 255, 255, 0.3); }
 .main.receipt_page .drink_receipt .drink_content p:last-child { padding-top: 8px; font-size: 19px; font-weight: 300; font-style: normal; color: rgba(255, 255, 255, 0.9); }
 .main.receipt_page .drink_receipt .drink_content p:last-child:before { content: ' '; display: block; clear: both; position: absolute; top: 0; width: calc(100% - 40px); border-top: 1px solid rgba(255, 255, 255, 0.3); }
 @media (max-width: 1199px) {
-	.main.receipt_page .receipt h2 { padding-left: 0; font-size: 36px;}
+	.main.receipt_page .receipt h2 { padding-left: 0; font-size: 32px;}
 	.main.receipt_page .drink_receipt { padding-left: 30px; }
-	.main.receipt_page .drink_receipt .drink_content h3 { font-size: 28px; }
-	.main.receipt_page .drink_receipt .drink_content p { font-size: 17px; padding-right: 10px; }
-	.main.receipt_page .drink_receipt .drink_content p.receipt_footer { font-size: 16px; }
+	.main.receipt_page .drink_receipt .drink_content h3 { font-size: 22px; }
+	.main.receipt_page .drink_receipt .drink_content p { font-size: 16px; padding-right: 10px; }
+	.main.receipt_page .drink_receipt .drink_content p.receipt_footer { font-size: 14px; }
 	.main.receipt_page .drink_receipt .drink_content p:last-child { font-size: 16px; }
 }
 @media (max-width: 991px) {
@@ -178,10 +178,11 @@ footer.main_footer .copyright img { width: auto; }
 }
 @media (max-width: 767px) {
 	.main.receipt_page .drink_receipt { padding: 30px 20px; }
-	.main.receipt_page .receipt h2 { font-size: 30px; }
+	.main.receipt_page .receipt h2 { font-size: 28px; }
 	.main.receipt_page .drink_receipt .drink_img { float: none; width: 75%;}
 	.main.receipt_page .drink_receipt .drink_content { float: none; width: 100%; }
-	.main.receipt_page .drink_receipt .drink_content p { padding-right: 0px; }
+	.main.receipt_page .drink_receipt .drink_content p { padding-right: 0px; font-size: 14px;}
+	.main.receipt_page .drink_receipt .drink_content p:last-child { font-size: 14px; }
 }
 /*---End Receipt Page---*/
 
@@ -194,7 +195,7 @@ footer.main_footer .copyright img { width: auto; }
 .main.products_page .products_row .products_cell .caption { position: absolute; left: 10%; bottom: 27%;}
 .main.products_page .products_row .products_cell .caption h2 { margin: 0; padding-right: 20px; font-family: 'Raleway', sans-serif; font-size: 88px; font-weight: 900; color: rgba(247, 247, 247, 1.0); line-height: 1; text-transform: uppercase; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
 .main.products_page .products_row .products_cell .caption p { margin: 0; margin-top: 10px; font-size: 24px; color: #F7F7F7; line-height: 1; text-transform: uppercase; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;} 
-.main.products_page .products_row .products_cell .caption h2.new { font-size: 60px; }
+.main.products_page .products_row .products_cell .caption h2.new { /*font-size: 60px;*/ }
 .main.products_page .products_row .products_cell a:hover .caption h2,
 .main.products_page .products_row .products_cell a:hover .caption p {color: #99999B;}
 .main.products_page .products_row .products_cell a span img { position: absolute; left: 50%; top: 15%; width: auto; height: 70%; -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); -o-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); transform: translate(-50%, 0); -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
@@ -467,6 +468,7 @@ footer.main_footer .copyright img { width: auto; }
 .main.calc_page .calc_conditions p { margin: 36px 0; font-size: 17px; font-weight: 300; color: #FFFFFF; }
 .main.calc_page .calc_documents { padding: 62px 0;}
 .main.calc_page .calc_documents h3 { margin: 0; font-family: 'Raleway', sans-serif; font-size: 42px; font-weight: 600; text-align: center; line-height: 1; color: #FFFFFF; text-transform: uppercase;}
+.main.calc_page .calc_documents h4 img { width: auto; }
 .main.calc_page .calc_documents center { margin: 36px 0; }
 .main.calc_page .calc_documents a { font-size: 25px; font-weight: 300; color: #FFFFFF;}
 @media (max-width: 1199px) {

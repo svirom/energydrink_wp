@@ -41,7 +41,7 @@ get_header(); ?>
 			<div class="products_cell">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/products_img_n_4.png">
 				<span class="caption">
-					<h2 class="home_title new">Новые вкусы</h2>
+					<h2 class="home_title new">New tastes</h2>
 					<p>Скоро</p>
 				</span>
 			</div>

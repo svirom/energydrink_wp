@@ -20,7 +20,7 @@ Template Name: Receipts Page
     				<?php the_content(); ?> 
     			</div>
     			<div class="drink_img">
-    				<?php the_post_thumbnail('thumbnail'); ?>
+    				<?php the_post_thumbnail('full'); ?>
     			</div>	
     		</div>
 		<?php endwhile; ?>
@@ -40,7 +40,7 @@ Template Name: Receipts Page
     				<?php the_content(); ?> 
     			</div>
     			<div class="drink_img">
-    				<?php the_post_thumbnail('thumbnail'); ?>
+    				<?php the_post_thumbnail('full'); ?>
     			</div>	
     		</div>
 		<?php endwhile; ?>
