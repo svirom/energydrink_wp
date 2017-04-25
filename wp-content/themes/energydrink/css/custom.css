@@ -505,8 +505,6 @@ footer.main_footer .copyright img { width: auto; }
 }
 /*---End Calc Page---*/
 
-.main.blanc_page { height: calc(100vh - 196px); background-color: #141414; }
-
 /*---Prev Next Links in Single article---*/
 .prev_next { display: table-row; width: 100%; background: #1D1D1B;}
 .prev_next_inner { display: table-cell; width: 50%; border: 1px solid #343432; vertical-align: top;}
@@ -525,7 +523,25 @@ footer.main_footer .copyright img { width: auto; }
 /*---End Prev Next Links in Single article---*/
 
 /*---Different---*/
-p.error-404 { padding: 60px 40px; font-size: 28px; color: #FFFFFF; text-align: center; }
+.main.blanc_page { padding: 60px 0; min-height: calc(100vh - 196px); background-color: /*#141414*/#020100; }
+.main.blanc_page img { width: auto;}
+.main.blanc_page img.logo_404 { display: block; width: 80px; margin: 0 auto 40px;}
+.main.blanc_page img.logo_bulls { display: block; width: auto; margin: 0 auto; padding: 20px 40px;}
+p.error-404 { padding: 0 40px; font-size: 28px; color: #FFFFFF; text-align: center; text-transform: uppercase;}
+p.error-404:last-of-type { font-size: 32px; }
+@media (max-width: 1200px) {
+	p.error-404 { font-size: 22px; }
+	p.error-404:last-of-type { font-size: 24px; }
+	.main.blanc_page img.logo_bulls { padding-top: 0; }
+}
+@media (max-width: 767px) {
+	.main.blanc_page { padding-top: 20px; }
+	p.error-404 { font-size: 18px; }
+	p.error-404:last-of-type { font-size: 20px; }
+	.main.blanc_page img.logo_404 { width: 60px; }
+	.main.blanc_page img.logo_bulls { padding-top: 0; }
+}
+
 .main.search_page { padding: 40px; background: #141414;}
 .main.search_page article { padding-bottom: 40px;}
 .main.search_page .post_meta { font-size: 17px; color: #FFFFFF; }
