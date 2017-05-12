@@ -164,16 +164,16 @@ $(document).ready(function(){
     $('#calc_form .total_volume').text(((total_volume1/1728)+(total_volume2/4092)+(total_volume3/1728)+(total_volume4/4092)).toFixed(2));
 
     if (total_volume >= 1) {
-      $(classic_big_price).text(65);
-      $(classic_small_price).text(53);
-      $(original_big_price).text(65);
-      $(original_small_price).text(53);
+      $(classic_big_price).text(65).closest('td').addClass('new_color');
+      $(classic_small_price).text(53).closest('td').addClass('new_color');
+      $(original_big_price).text(65).closest('td').addClass('new_color');
+      $(original_small_price).text(53).closest('td').addClass('new_color');
     }
     else {
-      $(classic_big_price).text(75.3);
-      $(classic_small_price).text(63.6);
-      $(original_big_price).text(75.3);
-      $(original_small_price).text(63.6);
+      $(classic_big_price).text(75.3).closest('td').removeClass('new_color');
+      $(classic_small_price).text(63.6).closest('td').removeClass('new_color');
+      $(original_big_price).text(75.3).closest('td').removeClass('new_color');
+      $(original_small_price).text(63.6).closest('td').removeClass('new_color');
     }
 
     var classic_big_price_v = $('#classic_big_p').text();

@@ -14,6 +14,7 @@ Template Name: Calc Page
         </div>
 		<div class="calc_content">
 			<h3>Оптовый калькулятор</h3>
+            <p class="prices">Цены зависят от объёма и пересчитываются автоматически</p>
 			<form id="calc_form" action="/" method="post">
 				<table>
                     <tr>
