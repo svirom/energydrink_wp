@@ -428,7 +428,7 @@ footer.main_footer .copyright img { width: auto; }
 /*---Calc Page---*/
 .main.calc_page { padding: 0 46px 58px 98px; background: #1D1D1B;}
 .main.calc_page .calc_header { padding: 58px 0 66px; border-bottom: 1px solid rgba(255, 255, 255, 0.09); background: url(../img/products_img_n_1.png) 150% center no-repeat;}
-.main.calc_page .calc_header h2 { margin: 0; font-family: 'Raleway', sans-serif; font-size: 63px; font-weight: 600; line-height: 1; color: #FFFFFF;}
+.main.calc_page .calc_header h2 { margin: 0; margin-bottom: 10px; font-family: 'Raleway', sans-serif; font-size: 63px; font-weight: 600; line-height: 1; color: #FFFFFF;}
 .main.calc_page .calc_header p { margin: 0; font-size: 33px; font-weight: 300; color: #FFFFFF; }
 .main.calc_page .calc_mobile { display: none; padding: 40px 20px 40px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.09); font-size: 17px; font-weight: 400; color: #FFFFFF; text-align: center;}
 .main.calc_page .calc_content { padding: 62px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.09);}
@@ -454,7 +454,7 @@ footer.main_footer .copyright img { width: auto; }
 .main.calc_page .calc_content #calc_form table tr:last-child td:last-child { border-bottom-right-radius: 8px;}
 .main.calc_page .calc_content #calc_form table input { width: 60%; height: 50px; padding-left: 12px; color: #FFFFFF; font-size: 17px; font-weight: 400; border: 4px solid #FFFFFF; border-radius: 4px; background: transparent; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 .main.calc_page .calc_content #calc_form p { font-family: 'Roboto', sans-serif; font-size: 24px; font-weight: 600; text-transform: uppercase; color: #FFFFFF; }
-.main.calc_page .calc_content p.prices { font-family: 'Roboto', sans-serif; font-weight: 400; text-transform: none; text-align: center; font-size: 17px; color: #FFFFFF;}
+.main.calc_page .calc_content p.prices { margin-top: 5px; font-family: 'Roboto', sans-serif; font-weight: 400; text-transform: none; text-align: center; font-size: 17px; color: #FFFFFF;}
 .new_color { color: #ffee93; }
 .main.calc_page .calc_content #calc_form .calc_input { width: 767px; }
 .main.calc_page .calc_content #calc_form .calc_input:after { content: ' '; display: block; clear: both; }
